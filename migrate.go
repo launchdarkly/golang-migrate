@@ -85,6 +85,7 @@ type Migrate struct {
 // New returns a new Migrate instance from a source URL and a database URL.
 // The URL scheme is defined by each driver.
 func New(sourceURL, databaseURL string) (*Migrate, error) {
+	fmt.Println("Testing")
 	m := newCommon()
 
 	sourceName, err := iurl.SchemeFromURL(sourceURL)
